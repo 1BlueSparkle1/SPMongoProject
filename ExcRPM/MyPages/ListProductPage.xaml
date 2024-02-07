@@ -1,0 +1,48 @@
+﻿<Page x:Class="ExcRPM.MyPages.ListProductPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ExcRPM.MyPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ListProductPage">
+
+    <Grid>
+        <StackPanel>
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">Ед. измерения</TextBlock>
+                        <ComboBox x:Name="UnitFilterCb" SelectionChanged="UnitFilterCb_SelectionChanged">
+                        </ComboBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock VerticalAlignment="Center">Поиск</TextBlock>
+                        <TextBox x:Name="SearchTb" TextChanged="SearchTb_TextChanged"></TextBox>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center"></StackPanel>
+            </StackPanel>
+
+            <ListView Name="ListLv">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="120" Header="Серийный номер" DisplayMemberBinding="{Binding SerialNumber}"></GridViewColumn>
+                        <GridViewColumn Width="150" Header="Фото" DisplayMemberBinding="{Binding MainImage}"></GridViewColumn>
+                        <GridViewColumn Width="200" Header="Наименование" DisplayMemberBinding="{Binding Name}"></GridViewColumn>
+                        <GridViewColumn Width="130" Header="Единица измерения" DisplayMemberBinding="{Binding Unit.Name}"></GridViewColumn>
+                        <GridViewColumn Width="80" Header="Количество" DisplayMemberBinding="{Binding Count}"></GridViewColumn>
+                        <GridViewColumn Width="150">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button x:Name="DeleteBtn" Click="DeleteBtn_Click">Удалить</Button>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -9,5 +9,8 @@
             <Setter Property="FontSize" Value="20"></Setter>
             <Setter Property="Padding" Value="5"></Setter>
         </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="20"></Setter>
+        </Style>
     </Application.Resources>
 </Application>

@@ -13,19 +13,26 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WpfApp1.Components;
-using WpfApp1.MyPages;
 
-namespace WpfApp1
+namespace WpfApp1.MyPages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для AuthorizationPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AuthorizationPage : Page
     {
-        public MainWindow()
+        public AuthorizationPage()
         {
             InitializeComponent();
-            Navigations.mainWindow = this;
+        }
+
+        private void StartGameBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Navigations.NextPage(new ChoicePersonPage());
+        }
+
+        private void Back1Btn_Click(object sender, RoutedEventArgs e)
+        {
             Navigations.NextPage(new MainPage());
         }
     }

@@ -12,10 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WpfApp1.Components;
-using WpfApp1.MyPages;
 
-namespace WpfApp1
+namespace CalculatorTest
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
@@ -25,8 +23,6 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
-            Navigations.mainWindow = this;
-            Navigations.NextPage(new MainPage());
         }
     }
 }
