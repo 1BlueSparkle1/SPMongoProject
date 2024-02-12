@@ -26,9 +26,9 @@ namespace ExcRPM.Components
         }
     
         public virtual DbSet<Intake> Intake { get; set; }
-        public virtual DbSet<Product> Product { get; set; }
         public virtual DbSet<ProductIntake> ProductIntake { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Unit> Unit { get; set; }
+        public virtual DbSet<Product> Product { get; set; }
     }
 }

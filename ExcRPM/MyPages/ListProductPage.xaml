@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ExcRPM.MyPages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="500" d:DesignWidth="800"
       Title="ListProductPage">
 
     <Grid>
@@ -25,7 +25,7 @@
                 <StackPanel HorizontalAlignment="Center"></StackPanel>
             </StackPanel>
 
-            <ListView Name="ListLv">
+            <ListView Name="ListLv" Height="250">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Width="120" Header="Серийный номер" DisplayMemberBinding="{Binding SerialNumber}"></GridViewColumn>
@@ -43,6 +43,11 @@
                     </GridView>
                 </ListView.View>
             </ListView>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button x:Name="AddBtn" Click="AddBtn_Click">Добавить</Button>
+                <Button x:Name="EditBtn" Click="EditBtn_Click">Редактировать</Button>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Page>

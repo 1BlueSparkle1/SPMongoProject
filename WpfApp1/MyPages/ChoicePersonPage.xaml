@@ -15,6 +15,8 @@
                 <Button Name="RogueBtn" Click="RogueBtn_Click">Вор</Button>
                 <Button Name="WizardBtn" Click="WizardBtn_Click">Маг</Button>
             </StackPanel>
+            <TextBlock>Введите имя персонажа</TextBlock>
+            <TextBox Height="35"></TextBox>
             <!--<StackPanel x:Name="Choice">
                 <Button>Создать нового</Button>
                 <Button>Выбрать из ваших персонажей</Button>

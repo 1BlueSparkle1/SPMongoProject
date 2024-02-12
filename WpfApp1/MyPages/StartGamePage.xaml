@@ -10,83 +10,76 @@
 
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock></TextBlock>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock></TextBlock>
-                <TextBlock></TextBlock>
-                <TextBlock></TextBlock>
-                <TextBlock></TextBlock>
+            <TextBlock HorizontalAlignment="Center" Name="PersonName">Ник - роль</TextBlock>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock x:Name="PersonalData">Уровень - уровень; Свободных поинтов:</TextBlock>
             </StackPanel>
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock></TextBlock>
-                        <TextBox></TextBox>
-                        <Button></Button>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <TextBlock VerticalAlignment="Center">Strenght:</TextBlock>
+                        <TextBlock x:Name="StrTb" VerticalAlignment="Center">30</TextBlock>
+                        <Button Height="40" Width="40">+</Button>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <TextBlock VerticalAlignment="Center">Dexterity:</TextBlock>
+                        <TextBlock VerticalAlignment="Center">15</TextBlock>
+                        <Button Height="40" Width="40">+</Button>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock></TextBlock>
-                        <TextBox></TextBox>
-                        <Button></Button>
+                        <TextBlock>Health:</TextBlock>
+                        <TextBlock>55</TextBlock>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock></TextBlock>
-                        <TextBox></TextBox>
-                        <Button></Button>
+                        <TextBlock>Mana</TextBlock>
+                        <TextBlock>10</TextBlock>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock></TextBlock>
-                        <TextBox></TextBox>
-                        <Button></Button>
+                        <TextBlock>P.damage:</TextBlock>
+                        <TextBlock>30</TextBlock>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock></TextBlock>
-                        <TextBox></TextBox>
-                        <Button></Button>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock></TextBlock>
-                        <TextBox></TextBox>
-                        <Button></Button>
+                        <TextBlock>Armor:</TextBlock>
+                        <TextBlock>15</TextBlock>
                     </StackPanel>
                 </StackPanel>
                 <StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock></TextBlock>
-                        <TextBox></TextBox>
-                        <Button></Button>
+                        <TextBlock VerticalAlignment="Center">Inteligence:</TextBlock>
+                        <TextBlock VerticalAlignment="Center">10</TextBlock>
+                        <Button Height="40" Width="40">+</Button>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <TextBlock VerticalAlignment="Center">Vitality:</TextBlock>
+                        <TextBlock VerticalAlignment="Center">25</TextBlock>
+                        <Button Height="40" Width="40">+</Button>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock></TextBlock>
-                        <TextBox></TextBox>
-                        <Button></Button>
+                        <TextBlock>M.damage:</TextBlock>
+                        <TextBlock>5</TextBlock>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock></TextBlock>
-                        <TextBox></TextBox>
-                        <Button></Button>
+                        <TextBlock>M.defense</TextBlock>
+                        <TextBlock>5</TextBlock>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock></TextBlock>
-                        <TextBox></TextBox>
-                        <Button></Button>
+                        <TextBlock>Crt.chanse:</TextBlock>
+                        <TextBlock>3</TextBlock>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock></TextBlock>
-                        <TextBox></TextBox>
-                        <Button></Button>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock></TextBlock>
-                        <TextBox></TextBox>
-                        <Button></Button>
+                        <TextBlock>Crt.damage:</TextBlock>
+                        <TextBlock>1</TextBlock>
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <Button></Button>
-                <Button></Button>
-                <Button></Button>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button>+100xp</Button>
+                <Button>+500xp</Button>
+                <Button>+1000xp</Button>
+            </StackPanel>
+            <StackPanel>
+                <Button>Выйти в главное меню</Button>
+                <Button>Выйти из игры</Button>
             </StackPanel>
         </StackPanel>
     </Grid>
