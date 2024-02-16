@@ -24,8 +24,8 @@ namespace WpfApp1.MyPages
         public StartGamePage()
         {
             InitializeComponent();
-            DefinitionPerson.StartGamePage = this;
-            DefinitionPerson.Info(App.Role);
+            DefinitionPerson.gamePage = this;
+            DefinitionPerson.StartInfo(App.Role);
         }
 
         private void BackExitBtn_Click(object sender, RoutedEventArgs e)
