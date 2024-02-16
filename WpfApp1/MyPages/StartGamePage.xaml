@@ -5,81 +5,136 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfApp1.MyPages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="500" d:DesignWidth="800"
       Title="StartGamePage">
 
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock HorizontalAlignment="Center" Name="PersonName">Ник - роль</TextBlock>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <TextBlock x:Name="PersonalData">Уровень - уровень; Свободных поинтов:</TextBlock>
+            <StackPanel Orientation="Horizontal" Width="450">
+                <TextBlock VerticalAlignment="Center">Введите имя персонажа:</TextBlock>
+                <TextBox Height="35"></TextBox>
+                <Button>Ввод</Button>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
                 <StackPanel>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                        <TextBlock VerticalAlignment="Center">Strenght:</TextBlock>
-                        <TextBlock x:Name="StrTb" VerticalAlignment="Center">30</TextBlock>
-                        <Button Height="40" Width="40">+</Button>
+                    <TextBlock HorizontalAlignment="Center" Name="PersonName">Ник - роль</TextBlock>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <TextBlock x:Name="PersonalHp">Уровень - 1; Опыт: 0/1000</TextBlock>
                     </StackPanel>
-                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                        <TextBlock VerticalAlignment="Center">Dexterity:</TextBlock>
-                        <TextBlock VerticalAlignment="Center">15</TextBlock>
-                        <Button Height="40" Width="40">+</Button>
+                    <TextBlock x:Name="PersonalFreePoint" HorizontalAlignment="Center">Свободных поинтов: 0</TextBlock>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                <TextBlock VerticalAlignment="Center">Strenght:</TextBlock>
+                                <TextBlock x:Name="StrTb" VerticalAlignment="Center">30</TextBlock>
+                                <Button x:Name="PlusStrBtn" Height="40" Width="40">+</Button>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                <TextBlock VerticalAlignment="Center">Dexterity:</TextBlock>
+                                <TextBlock x:Name="DexTb" VerticalAlignment="Center">15</TextBlock>
+                                <Button Height="40" Width="40">+</Button>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock>Health:</TextBlock>
+                                <TextBlock x:Name="HealTb">55</TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock>Mana:</TextBlock>
+                                <TextBlock x:Name="ManaTb">10</TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock>P.damage:</TextBlock>
+                                <TextBlock x:Name="PDamTb">30</TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock>Armor:</TextBlock>
+                                <TextBlock x:Name="ArmTb">15</TextBlock>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock VerticalAlignment="Center">Inteligence:</TextBlock>
+                                <TextBlock x:Name="IntTb" VerticalAlignment="Center">10</TextBlock>
+                                <Button Height="40" Width="40">+</Button>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                                <TextBlock VerticalAlignment="Center">Vitality:</TextBlock>
+                                <TextBlock x:Name="VitTb" VerticalAlignment="Center">25</TextBlock>
+                                <Button Height="40" Width="40">+</Button>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock>M.damage:</TextBlock>
+                                <TextBlock x:Name="MDamTb">5</TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock>M.defense:</TextBlock>
+                                <TextBlock x:Name="MDefTb">5</TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock>Crt.chanse:</TextBlock>
+                                <TextBlock x:Name="CrtChanTb">3</TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock>Crt.damage:</TextBlock>
+                                <TextBlock x:Name="CrtDamTb">1</TextBlock>
+                            </StackPanel>
+                        </StackPanel>
                     </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock>Health:</TextBlock>
-                        <TextBlock>55</TextBlock>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock>Mana</TextBlock>
-                        <TextBlock>10</TextBlock>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock>P.damage:</TextBlock>
-                        <TextBlock>30</TextBlock>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock>Armor:</TextBlock>
-                        <TextBlock>15</TextBlock>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button x:Name="HundredExpBtn">+100xp</Button>
+                        <Button x:Name="FiveHundExpBtn">+500xp</Button>
+                        <Button x:Name="ThousandExpBtn">+1000xp</Button>
                     </StackPanel>
                 </StackPanel>
                 <StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock VerticalAlignment="Center">Inteligence:</TextBlock>
-                        <TextBlock VerticalAlignment="Center">10</TextBlock>
-                        <Button Height="40" Width="40">+</Button>
+                    <Button>Инвентарь</Button>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <TextBlock VerticalAlignment="Center">Оружие:</TextBlock>
+                        <TextBlock VerticalAlignment="Center"></TextBlock>
+                        <Button>Экипировать</Button>
+                        <Button>Просмотр</Button>
+                        <Button>Снять</Button>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                        <TextBlock VerticalAlignment="Center">Vitality:</TextBlock>
-                        <TextBlock VerticalAlignment="Center">25</TextBlock>
-                        <Button Height="40" Width="40">+</Button>
+                        <TextBlock VerticalAlignment="Center">Оружие:</TextBlock>
+                        <TextBlock VerticalAlignment="Center"></TextBlock>
+                        <Button>Экипировать</Button>
+                        <Button>Просмотр</Button>
+                        <Button>Снять</Button>
                     </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock>M.damage:</TextBlock>
-                        <TextBlock>5</TextBlock>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <TextBlock VerticalAlignment="Center">Щит:</TextBlock>
+                        <TextBlock VerticalAlignment="Center"></TextBlock>
+                        <Button>Экипировать</Button>
+                        <Button>Просмотр</Button>
+                        <Button>Снять</Button>
                     </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock>M.defense</TextBlock>
-                        <TextBlock>5</TextBlock>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <TextBlock VerticalAlignment="Center">Броня:</TextBlock>
+                        <TextBlock VerticalAlignment="Center"></TextBlock>
+                        <Button>Экипировать</Button>
+                        <Button>Просмотр</Button>
+                        <Button>Снять</Button>
                     </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock>Crt.chanse:</TextBlock>
-                        <TextBlock>3</TextBlock>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <TextBlock VerticalAlignment="Center">Кольцо:</TextBlock>
+                        <TextBlock VerticalAlignment="Center"></TextBlock>
+                        <Button>Экипировать</Button>
+                        <Button>Просмотр</Button>
+                        <Button>Снять</Button>
                     </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock>Crt.damage:</TextBlock>
-                        <TextBlock>1</TextBlock>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <TextBlock VerticalAlignment="Center">Амулет:</TextBlock>
+                        <TextBlock VerticalAlignment="Center"></TextBlock>
+                        <Button>Экипировать</Button>
+                        <Button>Просмотр</Button>
+                        <Button>Снять</Button>
                     </StackPanel>
                 </StackPanel>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button>+100xp</Button>
-                <Button>+500xp</Button>
-                <Button>+1000xp</Button>
             </StackPanel>
             <StackPanel>
-                <Button>Выйти в главное меню</Button>
-                <Button>Выйти из игры</Button>
+                <Button x:Name="BackExitBtn" Click="BackExitBtn_Click">Выйти в главное меню</Button>
+                <Button x:Name="ExitBtn" Click="ExitBtn_Click">Выйти из игры</Button>
             </StackPanel>
         </StackPanel>
     </Grid>

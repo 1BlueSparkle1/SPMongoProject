@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp1.Components;
 
 namespace WpfApp1.MyPages
 {
@@ -23,6 +24,18 @@ namespace WpfApp1.MyPages
         public StartGamePage()
         {
             InitializeComponent();
+            DefinitionPerson.StartGamePage = this;
+            DefinitionPerson.Info(App.Role);
+        }
+
+        private void BackExitBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Navigations.NextPage(new MainPage());
+        }
+
+        private void ExitBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

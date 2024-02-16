@@ -28,20 +28,23 @@ namespace WpfApp1.MyPages
 
         private void WarriorBtn_Click(object sender, RoutedEventArgs e)
         {
+            App.Role = "Warrior";
             Navigations.NextPage(new StartGamePage());
         }
 
         private void RogueBtn_Click(object sender, RoutedEventArgs e)
         {
+            App.Role = "Rogue";
             Navigations.NextPage(new StartGamePage());
         }
 
         private void WizardBtn_Click(object sender, RoutedEventArgs e)
         {
+            App.Role = "Wizard";
             Navigations.NextPage(new StartGamePage());
         }
 
-        private void Back2Btn_Click(object sender, RoutedEventArgs e)
+        private void BackBtn_Click(object sender, RoutedEventArgs e)
         {
             Navigations.NextPage(new AuthorizationPage());
         }

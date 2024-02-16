@@ -13,6 +13,10 @@ namespace WpfApp1
     /// </summary>
     public partial class App : Application
     {
-        public string Role = "";
+        public static string Role = "";
+        public static string Login = "";
+        public static string NamePerconWar = "";
+        public static string NamePerconRog = "";
+        public static string NamePerconWiz = "";
     }
 }

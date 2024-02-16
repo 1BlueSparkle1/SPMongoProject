@@ -28,7 +28,15 @@ namespace WpfApp1.MyPages
 
         private void StartGameBtn_Click(object sender, RoutedEventArgs e)
         {
-            Navigations.NextPage(new ChoicePersonPage());
+            if (LoginTb.Text == "")
+            {
+                MessageBox.Show("Логин должен быть заполнен!");
+            }
+            else
+            {
+                Navigations.NextPage(new ChoicePersonPage());
+            }
+            
         }
 
         private void Back1Btn_Click(object sender, RoutedEventArgs e)
