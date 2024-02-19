@@ -26,16 +26,31 @@ namespace WpfApp1.MyPages
             InitializeComponent();
             DefinitionPerson.gamePage = this;
             DefinitionPerson.StartInfo(App.Role);
+            AllPersonNameTb.Text = ChoosingName.choosingName(PersonNameTb.Text);
         }
 
         private void BackExitBtn_Click(object sender, RoutedEventArgs e)
         {
-            Navigations.NextPage(new MainPage());
+            Navigations.NextPage(new ChoicePersonPage());
+            ChoosingName.Name = "";
         }
 
         private void ExitBtn_Click(object sender, RoutedEventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (PersonNameTb.Text == "")
+            {
+                MessageBox.Show("Имя персонажа должно быть введено!");
+            }
+            else
+            {
+                ChoiceNameSp.Visibility = Visibility.Collapsed;
+                AllPersonNameTb.Text = ChoosingName.choosingName(PersonNameTb.Text);
+            }
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using WpfApp1.MyPages;
 
 namespace WpfApp1.Components
@@ -258,17 +259,84 @@ namespace WpfApp1.Components
                 _crtChan = (float)(Dex * 0.2);
                 _crtDam = (float)(Dex * 0.1);
                 gamePage.StrTb.Text = ((int)(Str)).ToString();
-                gamePage.DexTb.Text = Dex.ToString();
-                gamePage.IntTb.Text = Int.ToString();
-                gamePage.VitTb.Text = Vit.ToString();
-                gamePage.HealTb.Text = Health.ToString();
-                gamePage.ManaTb.Text = Mana.ToString();
-                gamePage.PDamTb.Text = PDam.ToString();
-                gamePage.ArmTb.Text = Arm.ToString();
-                gamePage.MDamTb.Text = MDam.ToString();
-                gamePage.MDefTb.Text = MDef.ToString();
-                gamePage.CrtChanTb.Text = CrtChan.ToString();
+                gamePage.DexTb.Text = ((int)(Dex)).ToString();
+                gamePage.IntTb.Text = ((int)(Int)).ToString();
+                gamePage.VitTb.Text = ((int)(Vit)).ToString();
+                gamePage.HealTb.Text = ((int)(Health)).ToString();
+                gamePage.ManaTb.Text = ((int)(Mana)).ToString();
+                gamePage.PDamTb.Text = ((int)(PDam)).ToString();
+                gamePage.ArmTb.Text = ((int)(Arm)).ToString();
+                gamePage.MDamTb.Text = ((int)(MDam)).ToString();
+                gamePage.MDefTb.Text = ((int)(MDef)).ToString();
+                gamePage.CrtChanTb.Text = ((int)(CrtChan)).ToString();
                 gamePage.CrtDamTb.Text = ((int)CrtDam).ToString();
+            }
+            else if (role == "Rogue")
+            {
+                MaxStr = 65;
+                MaxDex = 250;
+                MaxInt = 70;
+                MaxVit = 80;
+                _str = 20;
+                _dex = 30;
+                _int = 15;
+                _vit = 20;
+                _health = (float)(Vit * 1.5 + Str * 0.5);
+                _mana = (float)(Int * 1.2);
+                _pDam = (float)(Str * 0.5 + Dex * 0.5);
+                Arm = (float)(Dex * 1.5);
+                _mDam = (float)(Int * 0.2);
+                _mDef = (float)(Int * 0.5);
+                _crtChan = (float)(Dex * 0.2);
+                _crtDam = (float)(Dex * 0.1);
+                gamePage.StrTb.Text = ((int)(Str)).ToString();
+                gamePage.DexTb.Text = ((int)(Dex)).ToString();
+                gamePage.IntTb.Text = ((int)(Int)).ToString();
+                gamePage.VitTb.Text = ((int)(Vit)).ToString();
+                gamePage.HealTb.Text = ((int)(Health)).ToString();
+                gamePage.ManaTb.Text = ((int)(Mana)).ToString();
+                gamePage.PDamTb.Text = ((int)(PDam)).ToString();
+                gamePage.ArmTb.Text = ((int)(Arm)).ToString();
+                gamePage.MDamTb.Text = ((int)(MDam)).ToString();
+                gamePage.MDefTb.Text = ((int)(MDef)).ToString();
+                gamePage.CrtChanTb.Text = ((int)(CrtChan)).ToString();
+                gamePage.CrtDamTb.Text = ((int)CrtDam).ToString();
+            }
+            else if (role == "Wizard")
+            {
+                MaxStr = 45;
+                MaxDex = 80;
+                MaxInt = 250;
+                MaxVit = 70;
+                _str = 15;
+                _dex = 20;
+                _int = 35;
+                _vit = 15;
+                _health = (float)(Vit * 1.4 + Str * 0.2);
+                _mana = (float)(Int * 1.5);
+                _pDam = (float)(Str * 0.5);
+                Arm = Dex;
+                _mDam = Int;
+                _mDef = Int;
+                _crtChan = (float)(Dex * 0.2);
+                _crtDam = (float)(Dex * 0.1);
+                gamePage.StrTb.Text = ((int)(Str)).ToString();
+                gamePage.DexTb.Text = ((int)(Dex)).ToString();
+                gamePage.IntTb.Text = ((int)(Int)).ToString();
+                gamePage.VitTb.Text = ((int)(Vit)).ToString();
+                gamePage.HealTb.Text = ((int)(Health)).ToString();
+                gamePage.ManaTb.Text = ((int)(Mana)).ToString();
+                gamePage.PDamTb.Text = ((int)(PDam)).ToString();
+                gamePage.ArmTb.Text = ((int)(Arm)).ToString();
+                gamePage.MDamTb.Text = ((int)(MDam)).ToString();
+                gamePage.MDefTb.Text = ((int)(MDef)).ToString();
+                gamePage.CrtChanTb.Text = ((int)(CrtChan)).ToString();
+                gamePage.CrtDamTb.Text = ((int)CrtDam).ToString();
+            }
+            else
+            {
+                MessageBox.Show("Error");
+                Navigations.NextPage(new ChoicePersonPage());
             }
         }
     }

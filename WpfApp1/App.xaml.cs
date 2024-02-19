@@ -15,8 +15,5 @@ namespace WpfApp1
     {
         public static string Role = "";
         public static string Login = "";
-        public static string NamePerconWar = "";
-        public static string NamePerconRog = "";
-        public static string NamePerconWiz = "";
     }
 }

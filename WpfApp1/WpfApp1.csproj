@@ -63,6 +63,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Components\ChoosingName.cs" />
     <Compile Include="Components\DefinitionPerson.cs" />
     <Compile Include="Components\Navigations.cs" />
     <Compile Include="MainWindow.xaml.cs">

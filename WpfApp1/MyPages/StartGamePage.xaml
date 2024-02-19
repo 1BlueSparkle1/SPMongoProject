@@ -5,19 +5,19 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfApp1.MyPages"
       mc:Ignorable="d" 
-      d:DesignHeight="500" d:DesignWidth="800"
+      d:DesignHeight="600" d:DesignWidth="900"
       Title="StartGamePage">
 
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <StackPanel Orientation="Horizontal" Width="450">
+            <StackPanel x:Name="ChoiceNameSp" Orientation="Horizontal" Width="450">
                 <TextBlock VerticalAlignment="Center">Введите имя персонажа:</TextBlock>
-                <TextBox Height="35"></TextBox>
-                <Button>Ввод</Button>
+                <TextBox Name="PersonNameTb" Height="35"></TextBox>
+                <Button Click="Button_Click">Ввод</Button>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <StackPanel>
-                    <TextBlock HorizontalAlignment="Center" Name="PersonName">Ник - роль</TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Name="AllPersonNameTb">Ник - роль</TextBlock>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <TextBlock x:Name="PersonalHp">Уровень - 1; Опыт: 0/1000</TextBlock>
                     </StackPanel>
@@ -28,11 +28,13 @@
                                 <TextBlock VerticalAlignment="Center">Strenght:</TextBlock>
                                 <TextBlock x:Name="StrTb" VerticalAlignment="Center">30</TextBlock>
                                 <Button x:Name="PlusStrBtn" Height="40" Width="40">+</Button>
+                                <Button x:Name="MinusStrBtn" Height="40" Width="40">-</Button>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                                 <TextBlock VerticalAlignment="Center">Dexterity:</TextBlock>
                                 <TextBlock x:Name="DexTb" VerticalAlignment="Center">15</TextBlock>
-                                <Button Height="40" Width="40">+</Button>
+                                <Button x:Name="PlusDexBtn" Height="40" Width="40">+</Button>
+                                <Button x:Name="MinusDexBtn" Height="40" Width="40">-</Button>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock>Health:</TextBlock>
@@ -55,12 +57,14 @@
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock VerticalAlignment="Center">Inteligence:</TextBlock>
                                 <TextBlock x:Name="IntTb" VerticalAlignment="Center">10</TextBlock>
-                                <Button Height="40" Width="40">+</Button>
+                                <Button x:Name="PlusIntBtn" Height="40" Width="40">+</Button>
+                                <Button x:Name="MinusIntBtn" Height="40" Width="40">-</Button>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                                 <TextBlock VerticalAlignment="Center">Vitality:</TextBlock>
                                 <TextBlock x:Name="VitTb" VerticalAlignment="Center">25</TextBlock>
-                                <Button Height="40" Width="40">+</Button>
+                                <Button x:Name="PlusVitBtn" Height="40" Width="40">+</Button>
+                                <Button x:Name="MinusVitBtn" Height="40" Width="40">-</Button>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock>M.damage:</TextBlock>
@@ -80,6 +84,7 @@
                             </StackPanel>
                         </StackPanel>
                     </StackPanel>
+                    <Button>Принять изменения</Button>
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <Button x:Name="HundredExpBtn">+100xp</Button>
                         <Button x:Name="FiveHundExpBtn">+500xp</Button>
